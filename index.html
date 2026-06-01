@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NADI 2026 Shared Task - Arabic Speech Processing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .task-card:hover { transform: translateY(-5px); transition: 0.2s; }
+        .track-title { border-left: 4px solid #f97316; padding-left: 1rem; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-slate-900">NADI 2026 Shared Task</h1>
+        <a href="https://nadi.dlnlp.ai/2026" target="_blank" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 font-semibold">Official Website</a>
+    </nav>
+</header>
+
+<main class="container mx-auto px-6 py-12">
+    <section class="text-center mb-16">
+        <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Robust & Mixed-Dialect Arabic Speech</h2>
+        <p class="text-lg text-slate-600">Five speech-processing challenges for the Arab world’s dialects at ArabicNLP 2026.</p>
+    </section>
+
+    <!-- Tasks Grid -->
+    <section id="tasks" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Task 1: ASR -->
+        <div class="task-card bg-white rounded-xl shadow-md p-6">
+            <h4 class="text-xl font-bold mb-2">Task 1: Robust & Mixed-Dialect ASR</h4>
+            <p class="text-slate-600 mb-4">Noisy, mixed-dialect, and code-switched transcription.</p>
+            <div class="space-y-2">
+                <a href="#" class="block text-center bg-orange-100 text-orange-800 py-2 rounded-lg">Competition</a>
+                <a href="https://huggingface.co/collections/FatimahEmadEldin/code-switched-asr" target="_blank" class="block text-center bg-slate-100 text-slate-800 py-2 rounded-lg">Dataset (HF)</a>
+            </div>
+        </div>
+
+        <!-- Task 2: SID -->
+        <div class="task-card bg-white rounded-xl shadow-md p-6">
+            <h4 class="text-xl font-bold mb-2">Task 2: Spoken Dialect ID</h4>
+            <p class="text-slate-600 mb-4">Dialect classification under cross-domain conditions[cite: 2].</p>
+            <div class="space-y-2">
+                <a href="https://www.codabench.org/competitions/8553/" target="_blank" class="block text-center bg-orange-100 text-orange-800 py-2 rounded-lg">Competition</a>
+                <a href="https://huggingface.co/collections/FatimahEmadEldin/nadi-datasets-2025" target="_blank" class="block text-center bg-slate-100 text-slate-800 py-2 rounded-lg">Dataset (HF)</a>
+            </div>
+        </div>
+
+        <!-- Task 3: TTS -->
+        <div class="task-card bg-white rounded-xl shadow-md p-6">
+            <h4 class="text-xl font-bold mb-2">Task 3: Dialectal Arabic TTS</h4>
+            <p class="text-slate-600 mb-4">Generative synthesis reflecting regional prosody[cite: 2].</p>
+            <div class="space-y-2">
+                <a href="https://colab.research.google.com/github/Oddadmix/notebooks/blob/main/Lahgtna_Chatterbox_Demo-v1.ipynb" target="_blank" class="block text-center bg-orange-100 text-orange-800 py-2 rounded-lg">Inference Demo</a>
+                <a href="https://huggingface.co/collections/FatimahEmadEldin/dialectal-arabic-text-to-speech" target="_blank" class="block text-center bg-slate-100 text-slate-800 py-2 rounded-lg">Dataset (HF)</a>
+            </div>
+        </div>
+
+        <!-- Task 4: Translation -->
+        <div class="task-card bg-white rounded-xl shadow-md p-6">
+            <h4 class="text-xl font-bold mb-2">Task 4: Speech Translation</h4>
+            <p class="text-slate-600 mb-4">Robust translation of 9 dialects into English[cite: 2].</p>
+            <div class="space-y-2">
+                <a href="#" class="block text-center bg-orange-100 text-orange-800 py-2 rounded-lg">Competition</a>
+                <a href="https://huggingface.co/datasets/fbougares/TUNIFRA" target="_blank" class="block text-center bg-slate-100 text-slate-800 py-2 rounded-lg">Dataset (HF)</a>
+            </div>
+        </div>
+
+        <!-- Task 5: SLU -->
+        <div class="task-card bg-white rounded-xl shadow-md p-6">
+            <h4 class="text-xl font-bold mb-2">Task 5: Spoken Language Understanding</h4>
+            <p class="text-slate-600 mb-4">Intent recognition and slot filling for Tunisian dialect[cite: 1, 2].</p>
+            <div class="space-y-2">
+                <a href="#" class="block text-center bg-orange-100 text-orange-800 py-2 rounded-lg">Competition</a>
+                <a href="https://huggingface.co/datasets/Elyadata/SLURP-TN" target="_blank" class="block text-center bg-slate-100 text-slate-800 py-2 rounded-lg">Dataset (HF)</a>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+</body>
+</html>
