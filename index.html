@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NADI Shared Tasks Resource Tracker (2025 - 2026)</title>
+    <title>NADI Shared Task Tracker (2025 & 2026)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,143 +21,142 @@
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
         .track-title-2026 {
-            border-left: 4px solid #2563eb; /* blue-600 */
+            border-left: 4px solid #3b82f6; /* blue-500 */
             padding-left: 1rem;
         }
         .track-title-2025 {
-            border-left: 4px solid #059669; /* emerald-600 */
+            border-left: 4px solid #10b981; /* emerald-500 */
             padding-left: 1rem;
         }
-        /* Custom scrollbar for data links */
-        .links-container::-webkit-scrollbar {
-            width: 4px;
-        }
-        .links-container::-webkit-scrollbar-thumb {
-            background-color: #cbd5e1;
-            border-radius: 4px;
-        }
+        .badge-main { @apply bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-blue-200; }
+        .badge-additional { @apply bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-purple-200; }
+        .badge-model { @apply bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-orange-200; }
+        .badge-tba { @apply bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded border border-gray-200; }
     </style>
 </head>
 <body class="text-slate-800">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-slate-900 tracking-tight">NADI <span class="text-blue-600">Resources</span></h1>
+            <h1 class="text-2xl font-bold text-slate-900">NADI Resource Tracker</h1>
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#nadi-2026" class="text-slate-600 hover:text-blue-600 transition font-medium">NADI 2026</a>
                 <a href="#nadi-2025" class="text-slate-600 hover:text-emerald-600 transition font-medium">NADI 2025</a>
-                <a href="https://nadi.dlnlp.ai/2026" target="_blank" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition font-semibold shadow-sm">
+                <a href="https://nadi.dlnlp.ai/2026" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
                     Official Website
                 </a>
             </div>
             <div class="md:hidden">
-                <button id="menu-btn" class="text-slate-600 focus:outline-none hover:text-blue-600 transition">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <button id="menu-btn" class="text-slate-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
-            <a href="#nadi-2026" class="block py-3 px-6 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600">NADI 2026</a>
-            <a href="#nadi-2025" class="block py-3 px-6 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-emerald-600">NADI 2025</a>
-            <a href="https://nadi.dlnlp.ai/2026" target="_blank" class="block py-3 px-6 text-sm font-medium text-blue-600 hover:bg-slate-50">Official Website</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <a href="#nadi-2026" class="block py-3 px-6 text-sm text-slate-600 hover:bg-slate-50">NADI 2026 Tasks</a>
+            <a href="#nadi-2025" class="block py-3 px-6 text-sm text-slate-600 hover:bg-slate-50">NADI 2025 Tasks</a>
+            <a href="https://nadi.dlnlp.ai/2026" target="_blank" class="block py-3 px-6 text-sm text-blue-600 font-semibold hover:bg-slate-50">Official Website</a>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-12">
 
         <section class="text-center mb-16">
-            <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm">Resource Organizer</span>
-            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-2 mb-4">Robust & Mixed-Dialect Arabic Speech</h2>
-            <p class="max-w-2xl mx-auto text-lg text-slate-600 mb-6">
-                Centralized hub for tracking CodaBench links, main datasets, and supplementary models for the 2025 and 2026 NADI shared tasks.
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">Robust & Mixed-Dialect Arabic Speech</h2>
+            <p class="max-w-3xl mx-auto text-lg text-slate-600 mb-6">
+                Organized resource tracking for the NADI Shared Tasks (2025 & 2026). This includes data sets, baseline models, inference notebooks, and CodaBench links for all tracks.
             </p>
         </section>
 
-        <section id="nadi-2026" class="mb-20 scroll-mt-24">
+        <section id="nadi-2026" class="mb-20">
             <div class="flex items-center justify-between mb-8">
-                <h3 class="text-3xl font-bold track-title-2026 text-slate-900">NADI 2026 Tasks</h3>
-                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Current Edition</span>
+                <h3 class="text-3xl font-bold track-title-2026 text-slate-800">NADI 2026 Tasks</h3>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
                 
-                <div class="task-card bg-white rounded-xl shadow border border-slate-100 overflow-hidden p-6 flex flex-col md:col-span-2 lg:col-span-3">
-                    <div class="border-b border-slate-100 pb-4 mb-4">
-                        <h4 class="text-xl font-bold text-slate-900">Task 1: Robust & Mixed-Dialect ASR</h4>
-                        <p class="text-slate-500 text-sm mt-1">Transcribe noisy, dialectal, and code-switched Arabic speech.</p>
+                <div class="task-card bg-white rounded-xl shadow border border-slate-200 overflow-hidden p-6 flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-sm font-bold text-blue-600 tracking-wider uppercase">Task 1</span>
+                        <h4 class="text-xl font-bold mt-1 mb-2">Robust & Mixed-Dialect ASR</h4>
+                        <p class="text-sm text-slate-600 mb-2">Includes Subtasks: <br/><strong>1.1</strong> Noisy Country-Level | <strong>1.2</strong> Mixed-Dialect | <strong>1.3</strong> Code-Switched</p>
+                        <div class="flex space-x-2 mt-2">
+                            <span class="badge-tba">CodaBench: TBA</span>
+                        </div>
                     </div>
                     
-                    <div class="grid md:grid-cols-3 gap-4 flex-grow">
-                        <div class="bg-slate-50 rounded-lg p-4 flex flex-col border border-slate-200">
-                            <h5 class="font-semibold text-slate-800 mb-1">1.1: Noisy Country-Level</h5>
-                            <p class="text-xs text-slate-500 mb-4 flex-grow">Evaluate systems under challenging acoustic conditions from 8 Arab countries.</p>
-                            <a href="#" class="block w-full text-center bg-slate-200 text-slate-500 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">CodaBench: TBA</a>
-                        </div>
-                        <div class="bg-slate-50 rounded-lg p-4 flex flex-col border border-slate-200">
-                            <h5 class="font-semibold text-slate-800 mb-1">1.2: Mixed-Dialect</h5>
-                            <p class="text-xs text-slate-500 mb-4 flex-grow">Transcribe 15+ sub-regional dialectal varieties with hidden labels.</p>
-                            <a href="#" class="block w-full text-center bg-slate-200 text-slate-500 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">CodaBench: TBA</a>
-                        </div>
-                        <div class="bg-slate-50 rounded-lg p-4 flex flex-col border border-blue-200">
-                            <h5 class="font-semibold text-slate-800 mb-1">1.3: Code-Switched</h5>
-                            <p class="text-xs text-slate-500 mb-3">Tunisian Arabic speech with frequent switches into French and English.</p>
-                            <div class="space-y-2 mt-auto">
-                                <a href="https://huggingface.co/datasets/Elyadata/SLURP-TN" target="_blank" class="flex justify-between items-center w-full bg-blue-50 text-blue-700 px-3 py-1.5 rounded text-xs hover:bg-blue-100 transition font-medium border border-blue-100">Main Data: SLURP-TN <span>↗</span></a>
-                                <a href="https://huggingface.co/datasets/fbougares/TUNIFRA" target="_blank" class="flex justify-between items-center w-full bg-blue-50 text-blue-700 px-3 py-1.5 rounded text-xs hover:bg-blue-100 transition font-medium border border-blue-100">Main Data: TUNIFRA <span>↗</span></a>
-                                <a href="https://huggingface.co/collections/FatimahEmadEldin/code-switched-asr" target="_blank" class="flex justify-between items-center w-full bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded text-xs hover:bg-indigo-100 transition font-medium border border-indigo-100">Additional Data (HF) <span>↗</span></a>
-                                <a href="#" class="block w-full text-center bg-slate-200 text-slate-500 px-3 py-1.5 rounded text-xs font-medium cursor-not-allowed mt-2">CodaBench: TBA</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="task-card bg-white rounded-xl shadow border border-slate-100 overflow-hidden p-6 flex flex-col">
-                    <h4 class="text-lg font-bold text-slate-900 mb-1">Task 2: Spoken Dialect ID</h4>
-                    <p class="text-slate-500 text-sm mb-4 flex-grow">Classify spoken Arabic into 11 country-level dialects under cross-domain conditions.</p>
-                    <div class="space-y-2 mt-auto">
-                        <a href="https://huggingface.co/Elyadata/ADI-whisper-ADI17" target="_blank" class="flex justify-between items-center w-full bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-sm hover:bg-blue-100 transition font-medium">Data: ADI-whisper <span>↗</span></a>
-                        <a href="https://huggingface.co/collections/FatimahEmadEldin/dialectal-arabic-text-to-speech" target="_blank" class="flex justify-between items-center w-full bg-indigo-50 text-indigo-700 px-3 py-2 rounded-lg text-sm hover:bg-indigo-100 transition font-medium">Data: Dialectal Collection <span>↗</span></a>
-                        <a href="#" class="block w-full text-center bg-slate-200 text-slate-500 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">CodaBench: TBA</a>
-                    </div>
-                </div>
-
-                <div class="task-card bg-white rounded-xl shadow border border-slate-100 overflow-hidden p-6 flex flex-col">
-                    <h4 class="text-lg font-bold text-slate-900 mb-1">Task 3: Dialectal TTS</h4>
-                    <p class="text-slate-500 text-sm mb-4 flex-grow">Generate dialectal Arabic speech from text prompts reflecting target dialect rhythms.</p>
-                    <div class="space-y-2 mt-auto">
-                        <a href="https://colab.research.google.com/github/Oddadmix/notebooks/blob/main/Lahgtna_Chatterbox_Demo-v1.ipynb" target="_blank" class="flex justify-center items-center space-x-2 w-full bg-orange-50 text-orange-700 border border-orange-200 px-3 py-2 rounded-lg text-sm hover:bg-orange-100 transition font-semibold">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-                            <span>Lahjata Model Demo</span>
+                    <div class="mt-auto space-y-2 border-t pt-4">
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Resources</p>
+                        <a href="https://huggingface.co/datasets/Elyadata/SLURP-TN" target="_blank" class="flex justify-between items-center text-sm bg-slate-50 hover:bg-slate-100 p-2 rounded transition">
+                            <span class="truncate font-medium">SLURP-TN</span> <span class="badge-main">Main Data</span>
                         </a>
-                        <a href="#" class="block w-full text-center bg-slate-200 text-slate-500 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">CodaBench: TBA</a>
+                        <a href="https://huggingface.co/datasets/fbougares/TUNIFRA" target="_blank" class="flex justify-between items-center text-sm bg-slate-50 hover:bg-slate-100 p-2 rounded transition">
+                            <span class="truncate font-medium">TUNIFRA</span> <span class="badge-main">Main Data</span>
+                        </a>
+                        <a href="https://huggingface.co/collections/FatimahEmadEldin/code-switched-asr" target="_blank" class="flex justify-between items-center text-sm bg-slate-50 hover:bg-slate-100 p-2 rounded transition">
+                            <span class="truncate">Code-Switched ASR</span> <span class="badge-additional">Additional</span>
+                        </a>
+                        <a href="https://huggingface.co/collections/FatimahEmadEldin/dialectal-asr" target="_blank" class="flex justify-between items-center text-sm bg-slate-50 hover:bg-slate-100 p-2 rounded transition">
+                            <span class="truncate">Dialectal ASR Models</span> <span class="badge-model">Models</span>
+                        </a>
                     </div>
                 </div>
 
-                <div class="task-card bg-white rounded-xl shadow border border-slate-100 overflow-hidden p-6 flex flex-col">
-                    <h4 class="text-lg font-bold text-slate-900 mb-1">Task 4: Speech Translation</h4>
-                    <p class="text-slate-500 text-sm mb-4 flex-grow">Translate from 9 Arabic dialect speech inputs directly into English.</p>
-                    <div class="space-y-2 mt-auto">
-                        <a href="#" class="block w-full text-center bg-slate-200 text-slate-500 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed mt-2">CodaBench: TBA</a>
-                    </div>
-                </div>
-
-                <div class="task-card bg-white rounded-xl shadow border border-slate-100 overflow-hidden p-6 flex flex-col md:col-span-2">
-                    <h4 class="text-lg font-bold text-slate-900 mb-1">Task 5: Spoken Language Understanding</h4>
-                    <p class="text-slate-500 text-sm mb-4">Extract semantic information directly from Tunisian-dialect speech.</p>
-                    
-                    <div class="grid md:grid-cols-2 gap-4 flex-grow">
-                        <div class="bg-slate-50 rounded-lg p-4 border border-slate-200 flex flex-col">
-                            <h5 class="font-semibold text-slate-800 mb-1 text-sm">5.1: Intent Recognition</h5>
-                            <div class="mt-auto space-y-2">
-                                <a href="https://huggingface.co/datasets/Elyadata/SLURP-TN" target="_blank" class="flex justify-between items-center w-full bg-blue-50 text-blue-700 px-3 py-1.5 rounded text-xs hover:bg-blue-100 transition font-medium border border-blue-100">Data: SLURP-TN <span>↗</span></a>
-                                <a href="#" class="block w-full text-center bg-slate-200 text-slate-500 px-3 py-1.5 rounded text-xs font-medium cursor-not-allowed mt-2">CodaBench: TBA</a>
-                            </div>
+                <div class="task-card bg-white rounded-xl shadow border border-slate-200 overflow-hidden p-6 flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-sm font-bold text-blue-600 tracking-wider uppercase">Task 2</span>
+                        <h4 class="text-xl font-bold mt-1 mb-2">Spoken Dialect Identification</h4>
+                        <p class="text-sm text-slate-600 mb-2">Identify dialects under cross-domain conditions.</p>
+                        <div class="flex space-x-2 mt-2">
+                            <span class="badge-tba">CodaBench: TBA</span>
                         </div>
-                        <div class="bg-slate-50 rounded-lg p-4 border border-slate-200 flex flex-col">
-                            <h5 class="font-semibold text-slate-800 mb-1 text-sm">5.2: Slot Filling</h5>
-                            <div class="mt-auto">
-                                <a href="#" class="block w-full text-center bg-slate-200 text-slate-500 px-3 py-1.5 rounded text-xs font-medium cursor-not-allowed mt-2">CodaBench: TBA</a>
-                            </div>
+                    </div>
+                    <div class="mt-auto space-y-2 border-t pt-4">
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Resources</p>
+                        <a href="https://huggingface.co/Elyadata/ADI-whisper-ADI17" target="_blank" class="flex justify-between items-center text-sm bg-slate-50 hover:bg-slate-100 p-2 rounded transition">
+                            <span class="truncate font-medium">ADI-whisper-ADI17</span> <span class="badge-main">Main Data</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="task-card bg-white rounded-xl shadow border border-slate-200 overflow-hidden p-6 flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-sm font-bold text-blue-600 tracking-wider uppercase">Task 3</span>
+                        <h4 class="text-xl font-bold mt-1 mb-2">Dialectal Arabic Text-to-Speech</h4>
+                        <p class="text-sm text-slate-600 mb-2">Generative Arabic speech modeling reflecting regional prosody.</p>
+                        <div class="flex space-x-2 mt-2">
+                            <span class="badge-tba">CodaBench: TBA</span>
+                        </div>
+                    </div>
+                    <div class="mt-auto space-y-2 border-t pt-4">
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Resources</p>
+                        <a href="https://huggingface.co/collections/FatimahEmadEldin/dialectal-arabic-text-to-speech" target="_blank" class="flex justify-between items-center text-sm bg-slate-50 hover:bg-slate-100 p-2 rounded transition">
+                            <span class="truncate font-medium">Dialectal TTS Collection</span> <span class="badge-main">Dataset</span>
+                        </a>
+                        <a href="https://colab.research.google.com/github/Oddadmix/notebooks/blob/main/Lahgtna_Chatterbox_Demo-v1.ipynb" target="_blank" class="flex justify-between items-center text-sm bg-slate-50 hover:bg-slate-100 p-2 rounded transition">
+                            <span class="truncate text-orange-600 font-medium">Lahjata Colab Demo</span> <span class="badge-model">Inference</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col space-y-6">
+                    <div class="task-card bg-white rounded-xl shadow border border-slate-200 p-6">
+                        <span class="text-sm font-bold text-blue-600 tracking-wider uppercase">Task 4</span>
+                        <h4 class="text-lg font-bold mt-1 mb-2">Automatic Speech Translation</h4>
+                        <span class="badge-tba">CodaBench: TBA</span>
+                    </div>
+
+                    <div class="task-card bg-white rounded-xl shadow border border-slate-200 p-6 flex-grow flex flex-col">
+                        <span class="text-sm font-bold text-blue-600 tracking-wider uppercase">Task 5</span>
+                        <h4 class="text-lg font-bold mt-1 mb-2">Spoken Language Understanding</h4>
+                        <p class="text-sm text-slate-600 mb-3"><strong>5.1</strong> Intent Recognition | <strong>5.2</strong> Slot Filling</p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="badge-tba">CodaBench: TBA</span>
+                        </div>
+                        <div class="mt-auto border-t pt-4">
+                            <a href="https://huggingface.co/datasets/Elyadata/SLURP-TN" target="_blank" class="flex justify-between items-center text-sm bg-slate-50 hover:bg-slate-100 p-2 rounded transition">
+                                <span class="truncate font-medium">SLURP-TN (Tasks 5.1 & 5.2)</span> <span class="badge-main">Main Data</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -165,46 +164,45 @@
             </div>
         </section>
 
-        <hr class="border-slate-200 my-12">
+        <hr class="border-slate-200 mb-16">
 
-        <section id="nadi-2025" class="mb-16 scroll-mt-24">
+        <section id="nadi-2025" class="mb-16">
             <div class="flex items-center justify-between mb-8">
-                <h3 class="text-3xl font-bold track-title-2025 text-slate-900">NADI 2025 Tasks</h3>
-                <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Previous Edition</span>
+                <h3 class="text-3xl font-bold track-title-2025 text-slate-800">NADI 2025 Tasks</h3>
             </div>
-
+            
             <div class="grid md:grid-cols-2 gap-8">
                 
-                <div class="task-card bg-white rounded-xl shadow border border-emerald-100 overflow-hidden p-6 flex flex-col">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="text-xl font-bold text-slate-900">Task 1: Spoken ADI</h4>
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-mono">ID: 8553</span>
-                    </div>
-                    <p class="text-slate-600 mb-6 flex-grow">Arabic Dialect Identification from speech using models like Whisper and MMS.</p>
-                    
-                    <div class="mt-auto space-y-3">
-                        <a href="https://huggingface.co/collections/FatimahEmadEldin/nadi-datasets-2025" target="_blank" class="flex justify-between items-center w-full bg-emerald-50 border border-emerald-200 text-emerald-800 px-4 py-2 rounded-lg hover:bg-emerald-100 transition font-semibold">
-                            Speaker Identifier Data (HF) <span>↗</span>
-                        </a>
-                        <a href="https://www.codabench.org/competitions/8553/" target="_blank" class="flex justify-center items-center w-full bg-slate-800 text-white px-4 py-2 rounded-lg hover:bg-slate-900 transition font-semibold">
+                <div class="task-card bg-white rounded-xl shadow border border-slate-200 overflow-hidden p-6 flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-sm font-bold text-emerald-600 tracking-wider uppercase">Task 1</span>
+                        <h4 class="text-xl font-bold mt-1 mb-2">Spoken ADI</h4>
+                        <p class="text-sm text-slate-600 mb-4">Arabic Dialect Identification from speech using multidialectal corpus.</p>
+                        <a href="https://www.codabench.org/competitions/8553/" target="_blank" class="inline-block bg-slate-800 text-white text-sm px-4 py-2 rounded hover:bg-slate-700 transition font-medium">
                             View on CodaBench
+                        </a>
+                    </div>
+                    <div class="mt-auto space-y-2 border-t pt-4">
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Resources</p>
+                        <a href="https://huggingface.co/collections/FatimahEmadEldin/nadi-datasets-2025" target="_blank" class="flex justify-between items-center text-sm bg-slate-50 hover:bg-slate-100 p-2 rounded transition">
+                            <span class="truncate font-medium">Speaker Identifier Data</span> <span class="badge-additional">Collection</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="task-card bg-white rounded-xl shadow border border-emerald-100 overflow-hidden p-6 flex flex-col">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="text-xl font-bold text-slate-900">Task 2: Multidialectal ASR</h4>
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-mono">ID: 8587</span>
-                    </div>
-                    <p class="text-slate-600 mb-6 flex-grow">Develop ASR systems capable of accurately transcribing Arabic speech across multiple dialects.</p>
-                    
-                    <div class="mt-auto space-y-3">
-                        <a href="https://huggingface.co/datasets/UBC-NLP/NADI2025_subtask2_ASR_Test" target="_blank" class="flex justify-between items-center w-full bg-emerald-50 border border-emerald-200 text-emerald-800 px-4 py-2 rounded-lg hover:bg-emerald-100 transition font-semibold">
-                            Main Data: Subtask 2 ASR Test <span>↗</span>
-                        </a>
-                        <a href="https://www.codabench.org/competitions/8587/" target="_blank" class="flex justify-center items-center w-full bg-slate-800 text-white px-4 py-2 rounded-lg hover:bg-slate-900 transition font-semibold">
+                <div class="task-card bg-white rounded-xl shadow border border-slate-200 overflow-hidden p-6 flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-sm font-bold text-emerald-600 tracking-wider uppercase">Task 2</span>
+                        <h4 class="text-xl font-bold mt-1 mb-2">Multidialectal Arabic ASR</h4>
+                        <p class="text-sm text-slate-600 mb-4">Develop robust ASR systems capable of transcribing across multiple Arabic dialects.</p>
+                        <a href="https://www.codabench.org/competitions/8587/" target="_blank" class="inline-block bg-slate-800 text-white text-sm px-4 py-2 rounded hover:bg-slate-700 transition font-medium">
                             View on CodaBench
+                        </a>
+                    </div>
+                    <div class="mt-auto space-y-2 border-t pt-4">
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Resources</p>
+                        <a href="https://huggingface.co/datasets/UBC-NLP/NADI2025_subtask2_ASR_Test" target="_blank" class="flex justify-between items-center text-sm bg-slate-50 hover:bg-slate-100 p-2 rounded transition">
+                            <span class="truncate font-medium">UBC-NLP ASR Test</span> <span class="badge-main">Main Data</span>
                         </a>
                     </div>
                 </div>
@@ -214,10 +212,10 @@
 
     </main>
 
-    <footer class="bg-slate-900 text-white mt-12">
+    <footer class="bg-slate-900 text-white mt-16 border-t border-slate-800">
         <div class="container mx-auto px-6 py-8 text-center text-slate-400">
-            <p class="font-medium text-slate-300">NADI Shared Tasks Resource Tracker</p>
-            <p class="text-sm mt-2">Aggregating links for 2025 and 2026 iterations. For official guidelines, always refer to the primary NADI website.</p>
+            <p>© 2025-2026 NADI Shared Tasks Resource Tracker.</p>
+            <p class="text-sm mt-2">Associated with ArabicNLP.</p>
         </div>
     </footer>
 
@@ -230,13 +228,12 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Auto-close menu when a link is clicked
+        // Close mobile menu on link click
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
     </script>
-
 </body>
 </html>
